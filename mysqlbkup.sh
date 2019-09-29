@@ -1,27 +1,3 @@
-#!/bin/bash
-# --------------------------------------------------------------------------------
-# mysqlbkup
-# (c) Nathan Nobbe 2014
-# http://quickshiftin.com
-# quickshiftin@gmail.com
-#
-# A simple MySQL backup script in BASH.
-#
-# All it does is loop over every database and create a backup
-# file.  Every database has its own direcotry beneath the root
-# backup directory, $BACKUP_DIR.
-#
-# We're using gzip compression by default on each backup file and
-# labeling backup files by date.  The number of backup files
-# per db is controlled by $MAX_BACKUPS.
-#
-# The script is intended to be run by a cron job.  It echos
-# messages to STDOUT which can be redirecte to a file for
-# simple logging. 
-#
-# Some configuration options are supported. Read about them in the README.md file
-# --------------------------------------------------------------------------------
-
 # mysql server info ------------------------------------------
 if [ -e /etc/mysqlbkup.config ]; then
     . /etc/mysqlbkup.config
